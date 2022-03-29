@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+  <title>JS with Codeit</title>
+</head>
+
+<body>
+	<div id="mouse">
+		<div id="btns">
+			<div id="btn0" class="btn"></div>
+			<div id="btn1" class="btn"></div>
+			<div id="btn2" class="btn"></div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+	<script src="mouse-event.js"></script>
+
+    <div id="box1" class="box">
+		mousemove
+	</div>
+	<div id="box2" class="box">
+		<b class="title">mouseover / mouseout</b>
+		<div id="cell-1" class="cell">cell-1</div>
+		<div id="cell-2" class="cell">cell-2</div>
+		<div id="cell-3" class="cell">cell-3</div>
+		<div id="cell-4" class="cell">cell-4</div>
+	</div>
+    <div id="box1" class="box">
+		mousemove
+	</div>
+	<div id="box2" class="box">
+		<b class="title">mouseover / mouseout</b>
+		<div id="cell-1" class="cell">cell-1</div>
+		<div id="cell-2" class="cell">cell-2</div>
+		<div id="cell-3" class="cell">cell-3</div>
+		<div id="cell-4" class="cell">cell-4</div>
+	</div>
+<!--mousemove event 비교해보기-->
+    <div id="box3" class="bbox">
+        <b class="title">mouseover event count: 0</b>
+      </div>
+  
+      <div id="box4" class="bbox">
+        <b class="title">mouseenter event count: 0</b>
+      </div>
+      <script>
+        const box3 = document.querySelector('#box3');
+        const box4 = document.querySelector('#box4');
+  
+        let mouseenterCount = 0;
+        let mouseoverCount = 0;
+//mouseover
+//버블링 일어남
+        box3.addEventListener('mouseover', function () {
+          mouseenterCount++;
+          const msg = `mouseover event count: ${mouseenterCount}`;
+          box3.lastElementChild.textContent = msg;
+        });
+ //mouseenter 
+ //버블링 일어나지 않음
+        box4.addEventListener('mouseenter', function () {
+          mouseoverCount++;
+          const msg = `mouseenter event count: ${mouseoverCount}`;
+          box4.lastElementChild.textContent = msg;
+        });
+      </script>
+    </body>
+
+	<script src="mouse-event.js"></script>
+    <script src="mouse-index.js"></script>
+</body>
+
+</html>

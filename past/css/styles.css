@@ -1,0 +1,43 @@
+h1{
+    font-size: 64px;
+    text-align: center;
+}
+/*주석*/
+h2{
+    color: lime;
+}
+
+h3{
+    margin-top: 100px;       
+}
+
+p i{
+    font-size: 24px;
+}
+.big-blue-text{
+    font-size: 64px;
+    text-align: center;
+    color:blue;
+}
+#best-text{
+    color:orange;
+}
+.menu{
+    margin:50px;
+}
+.menu a{
+    margin-left:20px;
+    margin-right:20px;
+    text-decoration: none;
+    font-weight:200;
+}
+.proverb .title{
+    text-align:center;
+}
+.proverb .sub-title{
+    text-align:center;
+}
+@font-face{
+    src:url("../fonts/BMJUA_ttf.ttf");
+    font-family:"jua";
+}

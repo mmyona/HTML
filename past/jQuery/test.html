@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Website</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <img id="logo" src="../image/타이타닉.jpg" width="165" height="58">
+  
+  <div id="menu">
+    <a id="home"><b>Home</b></a>
+    <a onclick="click();">Seoul</a>
+    <a onclick="document.getElementById('photo').src='../image/dog.jpg';">Tokyo</a>
+    <a onclick="click();">Paris</a>
+  </div>
+
+  <img id="photo" src="../image/index.jpg" width="90%" onmouseenter="mouseEnter();"
+  onmouseleave="mouseLeave();">
+
+  <button>
+    <img src="../image/index.jpg" width="20" height="20"/>
+  </button>
+
+  <script 
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script> 
+
+<script>
+    //사진을 바꿔주는 함수
+    function click(){
+        //document.getElementById('photo').src='../image/index.jpg';
+        $('#photo').attr('src','../image/index.jpg')
+    }
+    function mouseEnter(){
+        $('#photo').css('box-shadow','5px 10px')
+    }
+    function mouseLeave(){
+        $('#photo').css('box-shadow','none')
+    }
+</script>
+</body>
+</html>
